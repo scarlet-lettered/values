@@ -2,16 +2,23 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta id="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- STYLES -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="./res/css/style.css">
     <!-- END STYLES -->
+
     <title>DBT Values Card Sort</title>
   </head>
   <body>
+  <!-- PLAN -->
+  <!-- start array | Card Buttons: LESS=removes card from screen and start array,
+  adds to notImp array MORE=changes card color, adds to moreImp array MOST=changes
+  card color, adds to mostImp array | Page submit (must have reduced down to X most important) and reset buttons | Modal pop-up shows values, share buttons to email download (tweet? instagram? android share button) -->
+  <!-- END PLAN -->
+
     <!-- Header -->
     <header>
 
@@ -55,6 +62,8 @@
 
     <!-- MAIN -->
     <main role="main" class="container-fluid">
+
+      <!-- INSTRUCTIONS JUMBO -->
       <section class="jumbotron jumbotron-fluid mt-3 ml-0 mr-0 pt-5">
         <div class="container">
           <h1>Instructions</h1>
@@ -62,326 +71,736 @@
           <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
         </div>
       </section>
+      <!-- INSTRUCTIONS JUMBO -->
+
+      <!-- CARD DECK -->
       <section class="container">
         <div class="card-deck">
-          <div class="card mb-2">
+          <div class="card mb-2" id="gods-will">
             <h3 class="text-center">GOD'S WILL</h3>
             <p class="text-center">to seek and obey the will of God</p>
+            <div class="btn-group deck" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="self-control">
             <h3 class="text-center">SELF-CONTROL</h3>
             <p class="text-center">to be disciplined in my own actions</p>
+            <div class="btn-group deck" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="rationality">
             <h3 class="text-center">RATIONALITY</h3>
             <p class="text-center">to be guided by reason and logic</p>
+            <div class="btn-group deck" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="sexuality">
             <h3 class="text-center">SEXUALITY</h3>
             <p class="text-center">to have an active and satisfying sex life</p>
+            <div class="btn-group deck" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="solitude">
             <h3 class="text-center">SOLITUDE</h3>
             <p class="text-center">to have time and space where  I can be apart from others</p>
+            <div class="btn-group deck" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="comfort">
             <h3 class="text-center">COMFORT</h3>
             <p class="text-center">to have a pleeasant and comfortable life</p>
+            <div class="btn-group deck" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="pleasure">
             <h3 class="text-center">PLEASURE</h3>
             <p class="text-center">to feel good</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="world-peace">
             <h3 class="text-center">WORLD PEACE</h3>
             <p class="text-center">to work to promote peace in the world</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="tradition">
             <h3 class="text-center">TRADITION</h3>
             <p class="text-center">to follow respected patterns of the past</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="FITNESS">
             <h3 class="text-center">FITNESS</h3>
             <p class="text-center">to be physically fit and strong</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="beauty">
             <h3 class="text-center">BEAUTY</h3>
             <p class="text-center">to appreciate beauty around me</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="attractiveness">
             <h3 class="text-center">ATTRACTIVENESS</h3>
             <p class="text-center">to be physically attractive</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="flexibility">
             <h3 class="text-center">FLEXIBILITY</h3>
             <p class="text-center">to adjust to new circumstances easily</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="ecology">
             <h3 class="text-center">ECOLOGY</h3>
             <p class="text-center">to live in harmony with the environment</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="duty">
             <h3 class="text-center">DUTY</h3>
             <p class="text-center">to carry out my duties and obligations</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="spirituality">
             <h3 class="text-center">SPIRITUALITY</h3>
             <p class="text-center">to grow and mature spiritually</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="health">
             <h3 class="text-center">HEALTH</h3>
             <p class="text-center">to be physically well and healthy</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="leisure">
             <h3 class="text-center">LEISURE</h3>
             <p class="text-center">to take time to relax and enjoy</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="excitement">
             <h3 class="text-center">EXCITEMENT</h3>
             <p class="text-center">to have a life full of thrills and stimulation</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="risk">
             <h3 class="text-center">RISK</h3>
             <p class="text-center">to take risks and chances</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="authority">
             <h3 class="text-center">AUTHORITY</h3>
             <p class="text-center">to be in charge of and responsible for others</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="power">
             <h3 class="text-center">POWER</h3>
             <p class="text-center">to have control over others</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="popularity">
             <h3 class="text-center">POPULARITY</h3>
             <p class="text-center"> to be well-liked by many people</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="fame">
             <h3 class="text-center">FAME</h3>
             <p class="text-center">to be known and recognized</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="simplicity">
             <h3 class="text-center">SIMPLICITY</h3>
             <p class="text-center">to live life simply, with minimal needs</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="virtue">
             <h3 class="text-center">VIRTUE</h3>
             <p class="text-center">to live a morally pure and excellent life</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="peace">
             <h3 class="text-center">INNER PEACE</h3>
             <p class="text-center">to experience personal peace</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="forgiveness">
             <h3 class="text-center">FORGIVENESS</h3>
             <p class="text-center">to be forgiving of others</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="tolerance">
             <h3 class="text-center">TOLERANCE</h3>
             <p class="text-center">to accept and respect those who differ from me</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="generosity">
             <h3 class="text-center">GENEROSITY</h3>
             <p class="text-center">to give what I have to others</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="romance">
             <h3 class="text-center">ROMANCE</h3>
             <p class="text-center">to have intense, eciting love in my life</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="friendship">
             <h3 class="text-center">FRIENDSHIP</h3>
             <p class="text-center">to have close, supportive friends</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="family">
             <h3 class="text-center">FAMILY</h3>
             <p class="text-center">to have a happy, loving family</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="monogamy">
             <h3 class="text-center">MONOGAMY</h3>
             <p class="text-center">to have one close, loving relationship</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="compassion">
             <h3 class="text-center">COMPASSION</h3>
             <p class="text-center">to feel and act on concern for others</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="competency">
             <h3 class="text-center">COMMITMENT</h3>
             <p class="text-center">to make enduring, meaningful commitments</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="intimacy">
             <h3 class="text-center">INTIMACY</h3>
             <p class="text-center">to share my innermost experiences with others</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="loving">
             <h3 class="text-center">LOVING</h3>
             <p class="text-center">to give love to others</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="loved">
             <h3 class="text-center">LOVED</h3>
             <p class="text-center">to be loved by those close to me</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="order">
             <h3 class="text-center">ORDER</h3>
             <p class="text-center">to have a life that is well-ordered and organized</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="stability">
             <h3 class="text-center">STABILITY</h3>
             <p class="text-center">to have a life that stays fairly consistent</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="dependability">
             <h3 class="text-center">DEPENDABILITY</h3>
             <p class="text-center">to be reliable and trustworthy</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="courtesy">
             <h3 class="text-center">COURTESY</h3>
             <p class="text-center">to be considerate and polite toward others</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="safety">
             <h3 class="text-center">SAFETY</h3>
             <p class="text-center">to be safe and secure</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="creativity">
             <h3 class="text-center">CREATIVITY</h3>
             <p class="text-center">to have new and original ideas</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="openness">
             <h3 class="text-center">OPENNESS</h3>
             <p class="text-center">to be open to new experiences, ideas and options</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="passion">
             <h3 class="text-center">PASSION</h3>
             <p class="text-center">to have deep feelings about ideas, activities or people</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="non-conformity">
             <h3 class="text-center">NON-CONFORMITY</h3>
             <p class="text-center">to question and challenge authority and norms</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="realism">
             <h3 class="text-center">REALISM</h3>
             <p class="text-center">to see and act realistically and practically</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="independence">
             <h3 class="text-center">INDEPENDENCE</h3>
             <p class="text-center">to be free from dependence on others</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="autonomy">
             <h3 class="text-center">AUTONOMY</h3>
             <p class="text-center">to be self-deteremined and independent</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="challenge">
             <h3 class="text-center">CHALLENGE</h3>
             <p class="text-center">to take on difficult tasks and problems</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="industry">
             <h3 class="text-center">INDUSTRY</h3>
             <p class="text-center">to work hard and well at my life tasks</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="responsibility">
             <h3 class="text-center">RESPONSIBILITY</h3>
             <p class="text-center">to make and carry out responsible decisions</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="purpose">
             <h3 class="text-center">PURPOSE</h3>
             <p class="text-center">to have meaning and direction in my life</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="service">
             <h3 class="text-center">SERVICE</h3>
             <p class="text-center">to be of service to others</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="helpfulness">
             <h3 class="text-center">HELPFULNESS</h3>
             <p class="text-center">to be helpful to others</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="adventure">
             <h3 class="text-center">ADVENTURE</h3>
             <p class="text-center">to have new and exciting experiences</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="change">
             <h3 class="text-center">CHANGE</h3>
             <p class="text-center">to have a life full of change and variety</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="knowledge">
             <h3 class="text-center">KNOWLEDGE</h3>
             <p class="text-center">to learn and contribute valuable knowledge</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="growth">
             <h3 class="text-center">GROWTH</h3>
             <p class="text-center">to keep changing and growing</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="accuracy">
             <h3 class="text-center">ACCURACY</h3>
             <p class="text-center">to be accurate in my opinions and beliefs</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="achievement">
             <h3 class="text-center">ACHIEVEMENT</h3>
             <p class="text-center">to have important accomplishments</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="mastery">
             <h3 class="text-center">MASTERY</h3>
             <p class="text-center">to be competent in my everyday activities</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="contribution">
             <h3 class="text-center">CONTRIBUTION</h3>
             <p class="text-center">to make a lasting contribution in the world</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="wealth">
             <h3 class="text-center">WEALTH</h3>
             <p class="text-center">to have plenty of money</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="humor">
             <h3 class="text-center">HUMOR</h3>
             <p class="text-center">to see the humorous side of myself and the world</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="fun">
             <h3 class="text-center">FUN</h3>
             <p class="text-center">to play and have fun</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="justice">
             <h3 class="text-center">JUSTICE</h3>
             <p class="text-center">topromote fair and equal treatment for all</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="honesty">
             <h3 class="text-center">HONESTY</h3>
             <p class="text-center">to be honest and truthful</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="humility">
             <h3 class="text-center">HUMILITY</h3>
             <p class="text-center">to be modest and unassuming</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="faithfulness">
             <h3 class="text-center">FAITHFULNESS</h3>
             <p class="text-center">to be loyal and true in relationships</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="genuineness">
             <h3 class="text-center">GENUINENESS</h3>
             <p class="text-center">to act in a manner that is true to who I am</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="cooperation">
             <h3 class="text-center">COOPERATION</h3>
             <p class="text-center">to work collaboratively with others</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="hope">
             <h3 class="text-center">HOPE</h3>
             <p class="text-center">to maintain a positive and optimistic outlook</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="acceptance">
             <h3 class="text-center">ACCEPTANCE</h3>
             <p class="text-center">to be accepted as I am</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="self-acceptance">
             <h3 class="text-center">SELF-ACCEPTANCE</h3>
             <p class="text-center">to accept myself as I am</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="self-knowledge">
             <h3 class="text-center">SELF-KNOWLEDGE</h3>
             <p class="text-center">to have a deep and honest understanding of myself</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
-          <div class="card mb-2">
+          <div class="card mb-2" id="self-esteem">
             <h3 class="text-center">SELF-ESTEEM</h3>
             <p class="text-center">to feel good about myself</p>
+            <div class="btn-group deck" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+              <button type="button" class="btn btn-info text-light"><small>more</small></button>
+              <button type="button" class="btn btn-success text-light"><small>most</small></button>
+            </div>
           </div>
         </div>
       </section>
+      <!-- END CARD DECK -->
+
+      <!-- SUBMIT/RESET -->
+      <section>
+        <div class="btn-group sub-reset " role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-warning text-light"><small>less</small></button>
+          <button type="button" class="btn btn-info text-light"><small>more</small></button>
+          <button type="button" class="btn btn-success text-light"><small>most</small></button>
+        </div>
+      </section>
+      <!-- SUBMIT/RESET -->
+
     </main>
     <!-- END MAIN -->
 
